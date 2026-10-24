@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Z Dental Studio — Website Demo: How the Chatbot Will Look on Their Site</title>
+<style>
+*{box-sizing:border-box}body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;margin:0;color:#222;background:#f4f7f7}
+header{background:#0f4c5c;color:#fff;padding:18px 24px;display:flex;justify-content:space-between;align-items:center}
+header b{font-size:18px}header span{font-size:13px;opacity:.85}
+.hero{background:#fff;padding:28px 24px;border-bottom:1px solid #e2e8e8}
+.hero h1{margin:0 0 8px;font-size:26px}.hero p{color:#555;max-width:660px;line-height:1.5}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;padding:20px 24px}
+.card{background:#fff;border:1px solid #e2e8e8;border-radius:12px;padding:16px}.card b{display:block;margin-bottom:4px}.card span{color:#666;font-size:13px}
+.note{padding:0 24px 24px;color:#666;font-size:13px;line-height:1.5}
+.doctors{padding:0 24px 24px}.doctors h2{font-size:18px;margin:0 0 12px}
+.doc{background:#fff;border:1px solid #e2e8e8;border-radius:12px;padding:14px 16px;margin-bottom:10px}.doc b{display:block}.doc span{color:#555;font-size:13px;line-height:1.5}
+#fab{position:fixed;right:20px;bottom:20px;background:#0e7a7b;color:#fff;border:0;border-radius:999px;padding:14px 18px;font-weight:700;font-size:15px;cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.25);z-index:10}
+#widget{position:fixed;right:20px;bottom:84px;width:360px;max-width:calc(100vw - 40px);background:#fff;border:1px solid #ddd;border-radius:16px;box-shadow:0 12px 40px rgba(0,0,0,.25);display:none;flex-direction:column;overflow:hidden;z-index:11}
+#widget.open{display:flex}
+.whead{background:#0f4c5c;color:#fff;padding:12px 14px;font-weight:700}.whead small{display:block;font-weight:400;opacity:.85;font-size:12px}
+#chat{height:340px;overflow:auto;padding:12px;background:#fbfcfc}
+.msg{margin:8px 0;max-width:90%;padding:9px 11px;border-radius:12px;line-height:1.45;font-size:14px}
+.bot{background:#eef5f5}.user{background:#222;color:#fff;margin-left:auto}
+.chips{display:flex;flex-wrap:wrap;gap:6px;padding:8px 12px}.chips button{background:#eef5f5;color:#0f4c5c;border:0;border-radius:999px;padding:7px 10px;cursor:pointer;font-size:13px}
+.row{display:flex;gap:6px;padding:10px;border-top:1px solid #eee}input{flex:1;padding:10px;border:1px solid #ddd;border-radius:10px}button.send{background:#0e7a7b;color:#fff;border:0;border-radius:10px;padding:10px 14px;font-weight:700;cursor:pointer}
+.lead{background:#fff7e0;border:1px dashed #d9a400;border-radius:10px;padding:10px;font-size:13px}
+.demo{color:#a06a00;font-weight:700;font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+</style></head><body>
+<header><div><b>Z Dental Studio</b><br><span>Demo of their website — with the chatbot widget added</span></div><span>F-6 Markaz, Islamabad</span></header>
+<div class="hero"><p class="demo">Demo — this is NOT Z Dental Studio's real website</p>
+<h1>Changing Lives One Smile At A Time</h1>
+<p>First Floor, Mount View Plaza, School Road, Super Market, F-6 Markaz, Islamabad. Monday to Saturday, 10:00 am to 6:00 pm. Consultation charges: PKR 2,000 (as listed on the clinic's website).</p>
+<p><b>What this chatbot adds — and why Z Dental needs it more than most clinics:</b> their website has <b>no booking form at all</b> — a visitor can only read and then call. This widget sits on every page, answers the repeat questions instantly, guides an unsure patient to the right treatment, and captures the consultation request right here — name, phone and preferred day — so a late-night enquiry is saved instead of lost.</p>
+</div>
+<div class="cards">
+<div class="card"><b>Dental Cleaning</b><span>Scaling &amp; polishing — basic cleaning PKR 6,000, as listed on their site</span></div>
+<div class="card"><b>Root Canal</b><span>Pain-free endodontic treatment, confirmed after examination</span></div>
+<div class="card"><b>Crowns &amp; Implants</b><span>Crowns, bridges and dental implants</span></div>
+<div class="card"><b>Braces &amp; Aligners</b><span>Orthodontics, including invisible braces</span></div>
+<div class="card"><b>Fillings &amp; Whitening</b><span>Tooth-coloured fillings and teeth whitening</span></div>
+</div>
+<div class="doctors">
+<h2>The dentists on their website</h2>
+<div class="doc"><b>Dr. Ameerzeb Pirzada</b><span>Founder — BDS, M.Phil Dental Materials; diplomas in Implants, Endodontics and Orthodontics. 7+ years in practice.</span></div>
+<div class="doc"><b>Dr. Adnan Aslam</b><span>Consultant Surgeon (Oral &amp; Maxillofacial Surgery) — wisdom tooth extraction, dental implants, facial injuries. 20 years' experience.</span></div>
+<div class="doc"><b>Dr. Mir Hadi</b><span>Consultant Orthodontist — dental braces for children and adults, over 15 years' experience.</span></div>
+<div class="doc"><b>Dr. Syed Hammad Hassan</b><span>Prosthodontist — crowns, bridges and implant-supported dentures. Nearly 15 years' experience.</span></div>
+<div class="doc"><b>Dr. Nauman Noor</b><span>Consultant Endodontist — complex root canal treatment.</span></div>
+</div>
+<p class="note"><b>How it connects to their real website (no rebuild):</b> their website stays exactly as it is. Only one small code snippet is added — the same way live-chat buttons work on other sites. That snippet loads the floating chat button on every page. <b>What the chatbot will never do:</b> it will never invent a price or a diagnosis. Prices that are not on the clinic's website are confirmed in consultation, after examination. A chatbot answer is guidance to the right doctor, not a medical diagnosis.</p>
+
+<button id="fab" onclick="toggle()">💬 Chat with Z Dental</button>
+<div id="widget">
+<div class="whead">Z Dental Assistant <small>Replies instantly • English • Online now (demo)</small></div>
+<div id="chat"></div>
+<div class="chips" id="chips"></div>
+<div class="row"><input id="q" placeholder="Type here…"><button class="send" onclick="ask()">Send</button></div>
+</div>
+
+<script>
+const chat=document.getElementById('chat'), chips=document.getElementById('chips');
+let step=0, lead={};
+function say(t,cls){const d=document.createElement('div');d.className='msg '+cls;d.innerHTML=t;chat.appendChild(d);chat.scrollTop=chat.scrollHeight}
+function setChips(list){chips.innerHTML='';list.forEach(x=>{const b=document.createElement('button');b.textContent=x;b.onclick=()=>quick(x);chips.appendChild(b)})}
+function toggle(){document.getElementById('widget').classList.toggle('open')}
+say("Hello! I'm Z Dental Studio's assistant. Tell me your dental problem — for example, tooth pain, cleaning, braces, or a missing tooth — and I'll guide you to the right treatment and doctor, then help you book a consultation. You can also ask about prices, timings, or location.",'bot');
+setChips(['I have tooth pain','Cleaning / Whitening','Braces','Implants / Crowns','Price & timings','Book a consultation']);
+function faq(q){
+ q=q.toLowerCase();
+ if(/price|cost|fee|charges/.test(q)) return "Consultation charges at Z Dental Studio are PKR 2,000, as listed on their website. Basic dental cleaning (scaling & polishing) is listed at PKR 6,000. Other treatment prices are not listed as one fixed number on their site — they are confirmed after examination and consultation, because they depend on the tooth, the material and the number of visits. I won't guess a price that is not on their site.";
+ if(/timing|hours|open|close|when/.test(q)) return "Z Dental Studio is open Monday to Saturday, 10:00 am to 6:00 pm, as listed on their website's homepage. Sunday is closed in their listing.";
+ if(/where|location|address|kahan|f-6/.test(q)) return "First Floor, Mount View Plaza, School Road, Super Market, F-6 Markaz, Islamabad. Phone: 0345 5336999. Email: z.dental.studio.isb@gmail.com.";
+ if(/clean|scaling|polish/.test(q)) return "Dental cleaning at Z Dental Studio is scaling and polishing, usually taking 30 minutes to 1 hour, depending on the condition of your teeth. Basic cleaning is listed at PKR 6,000. The dentist first examines your teeth and gums, and may take X-rays if needed, before cleaning.";
+ if(/root canal|pain|ache|tooth pain|swell/.test(q)) return "For tooth pain, the first step at Z Dental Studio is examination and diagnosis — often with an X-ray — before any treatment is agreed. Root canal treatment is handled by their endodontist, Dr. Nauman Noor. A chatbot cannot diagnose your tooth, so the safe next step is a consultation (PKR 2,000). Shall I book it for you?";
+ if(/brace|aligner|invisible|straight|crooked/.test(q)) return "For braces and teeth straightening, Z Dental Studio's orthodontist is Dr. Mir Hadi, a consultant orthodontist with over 15 years' experience, treating children and adults. They also list invisible braces (clear aligners). The plan and price are confirmed after an orthodontic examination.";
+ if(/implant|missing tooth|crown|bridge|veneer/.test(q)) return "For a missing tooth, Z Dental Studio lists dental implants, crowns and bridges. Implants and wisdom-tooth surgery are handled by Dr. Adnan Aslam, and complex crown and bridge work by Dr. Syed Hammad Hassan, their prosthodontist. The right option and price are confirmed after examination and, where needed, an X-ray.";
+ if(/whiten|bleach|yellow|stain/.test(q)) return "Teeth whitening at Z Dental Studio is listed as a painless in-office procedure taking around 45 minutes to 1 hour, plus a take-home option. The shade you want is discussed with the dentist in consultation.";
+ if(/doctor|dentist|who/.test(q)) return "Z Dental Studio's team, as listed on their website: Dr. Ameerzeb Pirzada (founder), Dr. Adnan Aslam (consultant surgeon — implants, wisdom teeth), Dr. Mir Hadi (consultant orthodontist — braces), Dr. Syed Hammad Hassan (prosthodontist — crowns & bridges), and Dr. Nauman Noor (endodontist — root canals).";
+ if(/treat|service|what do you do/.test(q)) return "Z Dental Studio lists: dental cleaning, fillings, crowns, root canal treatment, teeth whitening, invisible braces, orthodontics and dental implants — with a team of specialist dentists for each area.";
+ return null;
+}
+function startBooking(){step=1;say("Of course! To start your consultation request, please choose a treatment first:",'bot');setChips(['Tooth pain / Root canal','Cleaning','Braces','Implants / Crowns','Whitening','Other'])}
+function quick(t){say(t,'user');handle(t)}
+function ask(){const i=document.getElementById('q');if(!i.value.trim())return;const v=i.value;i.value='';say(v,'user');handle(v)}
+function handle(v){
+ if(step===1){lead.service=v;step=2;say("Thank you — <b>"+v+"</b> selected. Now please type your name:",'bot');setChips([]);return}
+ if(step===2){lead.name=v;step=3;say("Thanks, "+v+". Now please type your phone number so the clinic can confirm:",'bot');return}
+ if(step===3){lead.phone=v;step=4;say("Last step: which day would you like to come? (for example: Saturday, or a date)",'bot');return}
+ if(step===4){lead.day=v;step=0;
+   say("<div class='lead'><b>✅ Consultation request saved (demo)</b><br>Name: "+lead.name+"<br>Treatment: "+lead.service+"<br>Phone: "+lead.phone+"<br>Preferred day: "+lead.day+"<br><br><b>This is what the clinic will see:</b> this request is saved in a lead list. The clinic team will confirm it — so even a late-night enquiry is not lost. In the real version, this can go to email or a sheet. Consultation charges, as listed on their site: PKR 2,000.</div>",'bot');
+   setChips(['Price & timings','Book another consultation']);return}
+ if(/book|consultation|appointment/.test(v.toLowerCase())){startBooking();return}
+ if(/tooth pain|pain|ache/.test(v.toLowerCase())){say("I'm sorry you're in pain. I can't diagnose a tooth from chat, but I can guide you: at Z Dental Studio the first step is examination and diagnosis, often with an X-ray, and root canal cases are handled by Dr. Nauman Noor, their endodontist. The consultation is PKR 2,000. Shall I book a consultation for you?",'bot');setChips(['Book a consultation','Price & timings']);return}
+ const a=faq(v);
+ if(a){say(a,'bot');setChips(['Book a consultation','Price & timings'])}
+ else{say("I don't have that answer from the clinic's website, so I won't guess. Shall I save your question for the clinic team?",'bot');setChips(['Yes, save my question','Book a consultation'])}
+}
+document.getElementById('q').addEventListener('keydown',e=>{if(e.key==='Enter')ask()});
+</script></body></html>
